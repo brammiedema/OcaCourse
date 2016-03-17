@@ -11,14 +11,13 @@ import javax.management.InvalidAttributeValueException;
  * 
  */
 public class IoDemoRunner {
+	
 	public static void main(String[] args) {
-
 		if (args.length == 1) {
 			run(args);
 		} else {
 			System.err.println("need to supply command to run");
 		}
-
 	}
 
 	private static void runCti(String[] args) {
@@ -36,7 +35,7 @@ public class IoDemoRunner {
 
 			System.out.println("enter size (in centimeters) of the hypotenuse side");
 			hypotenuseSide = s.nextDouble();
-
+			
 			s.close();
 
 			ScannerTriangle CT = new ScannerTriangle(opposingSide, adjecentSide, hypotenuseSide);

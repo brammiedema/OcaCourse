@@ -1,6 +1,7 @@
 package nl.youngcapital.atm.IoDemo;
 
 import javax.management.InvalidAttributeValueException;
+import java.lang.Math;
 
 //The triangle inequality theorem states that the sum of the lengths of any two
 //sides of a triangle is greater than the length of the third side. Write a program
@@ -19,6 +20,7 @@ public class ScannerTriangle {
 
 	public ScannerTriangle(double opposingSide, double adjecentSide, double hypotenuseSide)
 			throws InvalidAttributeValueException {
+		Math.abs(1.12); 
 
 		if (!checkTriangleInput(opposingSide) || !checkTriangleInput(adjecentSide)
 				|| !checkTriangleInput(hypotenuseSide)) {
@@ -27,7 +29,7 @@ public class ScannerTriangle {
 			this.opposingSide = opposingSide;
 			this.adjecentSide = adjecentSide;
 			this.hypotenuseSide = hypotenuseSide;
-
+			
 		}
 	}
 
@@ -41,11 +43,15 @@ public class ScannerTriangle {
 
 	public boolean checkTriangleInequality() {
 		double sum = this.opposingSide + this.adjecentSide;
-
+		int i = 0 ;
+		
+		
+		
 		if (sum >= this.hypotenuseSide)
 			return true;
 
 		return false;
+		
 	}
 
 	public boolean checkRightTriangle() {
